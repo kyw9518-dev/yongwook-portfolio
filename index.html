@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yongwook Kwon — Marketing Communications Director</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg2: #f7f6f3;
+      --text: #0f0f0f;
+      --text2: #6b6b6b;
+      --text3: #a0a0a0;
+      --border: rgba(0,0,0,0.1);
+      --border2: rgba(0,0,0,0.2);
+      --hero-bg: #0f0f0f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --bg2: #1a1a1a;
+        --text: #f0f0f0;
+        --text2: #888888;
+        --text3: #555555;
+        --border: rgba(255,255,255,0.1);
+        --border2: rgba(255,255,255,0.2);
+        --hero-bg: #050505;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 860px;
+      margin: 0 auto;
+      border-left: 0.5px solid var(--border);
+      border-right: 0.5px solid var(--border);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--hero-bg);
+      padding: 5rem 2.5rem 4.5rem;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.75rem;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 8vw, 76px);
+      font-weight: 300;
+      color: #ffffff;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 0.4rem;
+    }
+    .hero-name em { font-style: italic; color: rgba(255,255,255,0.45); }
+    .hero-role {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 3rem;
+    }
+    .hero-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+      max-width: 480px;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+    .brand-strip { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 3rem; }
+    .brand-chip {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border: 0.5px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.4);
+      border-radius: 2px;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #ffffff;
+      color: #0f0f0f;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      padding: 11px 24px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      padding: 11px 20px;
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* STAT ROW */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .stat-cell {
+      padding: 1.75rem 2.5rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .stat-cell:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1.5px;
+      margin-bottom: 5px;
+    }
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text2);
+    }
+
+    /* SECTIONS */
+    section { padding: 3rem 2.5rem; }
+    section + section { padding-top: 0; }
+
+    .sec-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .sec-title {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text2);
+    }
+    .sec-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--text3);
+      font-weight: 300;
+    }
+
+    /* PROJECTS */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .proj-card {
+      background: var(--bg);
+      transition: background 0.15s;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-card:hover { background: var(--bg2); }
+    .proj-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.3s, transform 0.4s;
+    }
+    .proj-card:hover .proj-img {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+    .proj-img-wrap {
+      overflow: hidden;
+      position: relative;
+      height: 160px;
+      background: var(--bg2);
+    }
+    .proj-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.18) 100%);
+      pointer-events: none;
+    }
+    .proj-body {
+      padding: 1.25rem 1.25rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-cat {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text2);
+      margin-bottom: 0.6rem;
+    }
+    .proj-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .proj-desc {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: auto;
+      padding-bottom: 1rem;
+    }
+    .proj-kpi {
+      font-size: 11px;
+      color: var(--text2);
+      padding-top: 1rem;
+      border-top: 0.5px solid var(--border);
+      letter-spacing: 0.3px;
+    }
+    .proj-kpi strong {
+      font-size: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      color: var(--text);
+      display: block;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 80px;
+      gap: 1rem;
+      align-items: start;
+      padding: 1.4rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .exp-row:first-child { padding-top: 0; }
+    .exp-period {
+      font-size: 11px;
+      color: var(--text2);
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+      padding-top: 3px;
+    }
+    .now-dot {
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--text);
+      margin-right: 5px;
+      vertical-align: middle;
+      margin-bottom: 1px;
+    }
+    .exp-role { font-size: 14px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .exp-co { font-size: 12px; color: var(--text2); font-weight: 300; }
+    .exp-note { font-size: 11px; color: var(--text3); font-style: italic; margin-top: 4px; }
+    .exp-dur { font-size: 11px; color: var(--text3); text-align: right; letter-spacing: 0.3px; padding-top: 3px; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .skill-cell {
+      background: var(--bg);
+      padding: 0.9rem 1.1rem;
+      font-size: 12px;
+      color: var(--text2);
+      letter-spacing: 0.3px;
+      font-weight: 300;
+      transition: background 0.15s, color 0.15s;
+    }
+    .skill-cell:hover { background: var(--bg2); color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.75rem 2.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.3px;
+    }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text3);
+    }
+
+    /* MEDIA LINKS */
+    .proj-media { margin-top: 1rem; padding-top: 1rem; border-top: 0.5px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+    .proj-media-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .media-thumb-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .media-thumb {
+      position: relative;
+      width: 72px;
+      height: 46px;
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      flex-shrink: 0;
+      text-decoration: none;
+      display: block;
+      border: 0.5px solid var(--border);
+    }
+    .media-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.2s, transform 0.3s; }
+    .media-thumb:hover img { filter: grayscale(0%); transform: scale(1.08); }
+    .media-thumb .play-icon {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.3);
+      transition: background 0.2s;
+    }
+    .media-thumb:hover .play-icon { background: rgba(0,0,0,0.1); }
+    .play-icon svg { width: 16px; height: 16px; }
+    .media-article {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; color: var(--text2);
+      text-decoration: none;
+      padding: 5px 8px;
+      border: 0.5px solid var(--border);
+      border-radius: 3px;
+      transition: background 0.15s;
+      letter-spacing: 0.2px;
+    }
+    .media-article:hover { background: var(--bg2); color: var(--text); }
+    .media-article-icon { font-size: 13px; flex-shrink: 0; }
+    .media-article-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* VIDEO SECTION */
+    .films-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .film-card {
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+    }
+    .film-card:hover .film-thumb img { filter: grayscale(0%) brightness(1.05); transform: scale(1.04); }
+    .film-card:hover .film-play { opacity: 1; }
+    .film-thumb {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #111;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+      border: 0.5px solid var(--border);
+    }
+    .film-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%);
+      transition: filter 0.25s, transform 0.35s;
+    }
+    .film-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.35);
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .film-platform {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .film-yt { background: #ff0000; color: #fff; }
+    .film-vimeo { background: #1ab7ea; color: #fff; }
+    .film-press { background: var(--text); color: var(--bg); }
+    .film-title {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.5;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+    }
+    .film-thumb-article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg2);
+    }
+    .film-thumb-article .article-icon {
+      position: absolute;
+      font-size: 28px;
+    }
+    .film-article .film-title {
+      color: var(--text);
+      font-weight: 400;
+      font-size: 12px;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .video-item {}
+    .video-embed-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #0a0a0a;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .video-embed-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text2);
+      margin-bottom: 4px;
+    }
+    .video-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.2px;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .stat-cell:nth-child(3) { grid-column: span 2; border-right: none; border-top: 0.5px solid var(--border); }
+      section { padding: 2rem 1.25rem; }
+      .exp-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .exp-dur { text-align: left; }
+      footer { flex-direction: column; gap: 1rem; align-items: flex-start; padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">Yongwook Kwon</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#films">Films</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg">
+      <svg width="100%" height="100%" viewBox="0 0 860 460" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="92" x2="860" y2="92" stroke="white" stroke-width="0.5"/>
+        <line x1="0" y1="184" x2="860" y2="184" stroke="white" stroke-width="0.5"/>
+        <line x1="0" y1="276" x2="860" y2="276" stroke="white" stroke-width="0.5"/>
+        <line x1="0" y1="368" x2="860" y2="368" stroke="white" stroke-width="0.5"/>
+        <line x1="107" y1="0" x2="107" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="215" y1="0" x2="215" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="322" y1="0" x2="322" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="430" y1="0" x2="430" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="538" y1="0" x2="538" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="645" y1="0" x2="645" y2="460" stroke="white" stroke-width="0.5"/>
+        <line x1="753" y1="0" x2="753" y2="460" stroke="white" stroke-width="0.5"/>
+        <circle cx="107" cy="92" r="3" fill="white"/>
+        <circle cx="215" cy="92" r="3" fill="white"/>
+        <circle cx="322" cy="92" r="3" fill="white"/>
+        <circle cx="430" cy="92" r="3" fill="white"/>
+        <circle cx="538" cy="92" r="3" fill="white"/>
+        <circle cx="645" cy="92" r="3" fill="white"/>
+        <circle cx="107" cy="184" r="3" fill="white"/>
+        <circle cx="215" cy="184" r="3" fill="white"/>
+        <circle cx="322" cy="184" r="3" fill="white"/>
+        <circle cx="430" cy="184" r="3" fill="white"/>
+        <circle cx="538" cy="184" r="3" fill="white"/>
+        <circle cx="645" cy="184" r="3" fill="white"/>
+        <circle cx="753" cy="184" r="3" fill="white"/>
+        <circle cx="107" cy="276" r="3" fill="white"/>
+        <circle cx="322" cy="276" r="3" fill="white"/>
+        <circle cx="538" cy="276" r="3" fill="white"/>
+        <circle cx="753" cy="276" r="3" fill="white"/>
+        <line x1="430" y1="92" x2="645" y2="184" stroke="white" stroke-width="0.5" stroke-dasharray="5 5"/>
+        <line x1="215" y1="184" x2="430" y2="276" stroke="white" stroke-width="0.5" stroke-dasharray="5 5"/>
+        <line x1="538" y1="92" x2="753" y2="276" stroke="white" stroke-width="0.5" stroke-dasharray="5 5"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Marketing Communications · Seoul, Korea</p>
+      <h1 class="hero-name">Yongwook<br><em>Kwon</em></h1>
+      <p class="hero-role">Director of Digital Communication · Publicis Groupe</p>
+      <p class="hero-desc">브랜드와 소비자 사이에 의미 있는 연결을 만들어가는 마케팅 커뮤니케이션 디렉터. BTL 프로모션부터 디지털 마케팅, IMC, 글로벌 캠페인까지 — 전략적 커뮤니케이션으로 실질적 성과와 성장을 이끌어냅니다.</p>
+      <div class="brand-strip">
+        <span class="brand-chip">Mercedes-Benz</span>
+        <span class="brand-chip">BMW MINI</span>
+        <span class="brand-chip">LG전자</span>
+        <span class="brand-chip">Kakao Games</span>
+        <span class="brand-chip">Volkswagen</span>
+        <span class="brand-chip">PUBG</span>
+        <span class="brand-chip">Maserati</span>
+        <span class="brand-chip">Columbia</span>
+        <span class="brand-chip">Stella Artois</span>
+        <span class="brand-chip">BRITA</span>
+      </div>
+      <div class="hero-btns">
+        <a class="btn-primary" href="https://www.linkedin.com/in/yongwook-kwon-16a067140/" target="_blank">LinkedIn 바로가기</a>
+        <a class="btn-secondary" href="mailto:kyw9518@gmail.com">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-cell">
+      <div class="stat-num">11+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">14+</div>
+      <div class="stat-label">Major Brands</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Agencies</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-header">
+      <span class="sec-title">주요 프로젝트</span>
+      <span class="sec-count">07</span>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#0a0a0a"/>
+            <circle cx="160" cy="80" r="52" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <circle cx="160" cy="80" r="38" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="160" y1="28" x2="160" y2="132" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="108" y1="80" x2="212" y2="80" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="123" y1="43" x2="197" y2="117" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+            <line x1="197" y1="43" x2="123" y2="117" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+            <circle cx="160" cy="80" r="4" fill="rgba(255,255,255,0.5)"/>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="8" letter-spacing="4" font-family="Inter,sans-serif">MERCEDES-BENZ</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Automotive · IMC</p>
+          <p class="proj-name">Mercedes-Benz Korea 글로벌 캠페인</p>
+          <p class="proj-desc">Publicis Emil에서 Daimler 전담 글로벌 에이전시로 글로벌-로컬 통합 IMC 캠페인 총괄. 브랜드 일관성과 현지화를 동시에 실현.</p>
+          <div class="proj-kpi"><strong>Global</strong>Network Agency</div>
+
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#1a1612"/>
+            <rect x="0" y="0" width="320" height="160" fill="url(#grid)"/>
+            <defs>
+              <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <ellipse cx="160" cy="72" rx="44" ry="28" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+            <ellipse cx="160" cy="72" rx="44" ry="28" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+            <rect x="138" y="96" width="44" height="18" rx="2" fill="rgba(255,255,255,0.06)"/>
+            <text x="160" y="109" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="7" letter-spacing="2" font-family="Inter,sans-serif">MINI</text>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,255,255,0.15)" font-size="8" letter-spacing="3" font-family="Inter,sans-serif">FLEA MARKET</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Automotive · BTL</p>
+          <p class="proj-name">MINI Flea Market 시리즈</p>
+          <p class="proj-desc">2015–2016 MINI 브랜드 플리마켓 및 부산 모터쇼 캠페인 기획·실행. Show me your trunk 시즌 3까지 브랜드 체험 공간 연속 설계.</p>
+          <div class="proj-kpi"><strong>3 Seasons</strong>캠페인 운영</div>
+
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#0d1117"/>
+            <polygon points="160,30 200,95 120,95" fill="none" stroke="rgba(255,180,0,0.25)" stroke-width="1.5"/>
+            <polygon points="160,45 188,90 132,90" fill="none" stroke="rgba(255,180,0,0.12)" stroke-width="1"/>
+            <circle cx="160" cy="62" r="3" fill="rgba(255,180,0,0.6)"/>
+            <line x1="40" y1="110" x2="280" y2="110" stroke="rgba(255,180,0,0.08)" stroke-width="1"/>
+            <line x1="40" y1="120" x2="280" y2="120" stroke="rgba(255,180,0,0.05)" stroke-width="1"/>
+            <text x="160" y="140" text-anchor="middle" fill="rgba(255,180,0,0.25)" font-size="8" letter-spacing="4" font-family="Inter,sans-serif">PUBG · KAKAO GAMES</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Gaming · Digital</p>
+          <p class="proj-name">Kakao Games · PUBG 디지털 전략</p>
+          <p class="proj-desc">배틀그라운드·파라곤 등 게이밍 타이틀 특성에 맞는 디지털 커뮤니케이션 전략 수립 및 캠페인 집행. 커뮤니티 중심 브랜드 경험 설계.</p>
+          <div class="proj-kpi"><strong>B2C</strong>Digital Campaign</div>
+
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#a50034"/>
+            <circle cx="160" cy="72" r="50" fill="rgba(255,255,255,0.05)"/>
+            <circle cx="160" cy="72" r="35" fill="rgba(255,255,255,0.05)"/>
+            <text x="145" y="82" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="36" font-weight="700" font-family="Inter,sans-serif">LG</text>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="8" letter-spacing="4" font-family="Inter,sans-serif">ELECTRONICS</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Electronics · Brand</p>
+          <p class="proj-name">LG전자 브랜드 커뮤니케이션</p>
+          <p class="proj-desc">글로벌 가전 브랜드 LG전자의 제품 런칭 및 브랜드 캠페인 기획. 소비자 인사이트 기반의 메시지 전략 수립 및 멀티채널 실행.</p>
+          <div class="proj-kpi"><strong>Global</strong>Brand Campaign</div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#001f5b"/>
+            <rect x="0" y="0" width="320" height="160" fill="url(#diag)"/>
+            <defs>
+              <pattern id="diag" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="20" stroke="rgba(255,255,255,0.04)" stroke-width="6"/>
+              </pattern>
+            </defs>
+            <ellipse cx="160" cy="68" rx="28" ry="38" fill="none" stroke="rgba(255,210,0,0.3)" stroke-width="2"/>
+            <ellipse cx="160" cy="68" rx="18" ry="26" fill="none" stroke="rgba(255,210,0,0.15)" stroke-width="1"/>
+            <line x1="132" y1="68" x2="188" y2="68" stroke="rgba(255,210,0,0.2)" stroke-width="1"/>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,210,0,0.25)" font-size="8" letter-spacing="3" font-family="Inter,sans-serif">STELLA ARTOIS</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Beverage · IMC</p>
+          <p class="proj-name">Stella Artois · Budweiser IMC</p>
+          <p class="proj-desc">프리미엄 맥주 브랜드의 국내 인지도 강화를 위한 통합 캠페인. BTL 프로모션과 디지털 채널을 연계한 크로스미디어 전략 실행.</p>
+          <div class="proj-kpi"><strong>FMCG</strong>Cross-media</div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#101010"/>
+            <path d="M160,38 L174,62 L200,66 L180,86 L185,112 L160,99 L135,112 L140,86 L120,66 L146,62 Z" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <path d="M160,52 L170,68 L188,71 L175,84 L178,102 L160,93 L142,102 L145,84 L132,71 L150,68 Z" fill="rgba(255,255,255,0.04)"/>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,255,255,0.18)" font-size="8" letter-spacing="4" font-family="Inter,sans-serif">MASERATI · VW</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Automotive · Luxury</p>
+          <p class="proj-name">Maserati · Volkswagen 런칭 캠페인</p>
+          <p class="proj-desc">럭셔리·프리미엄 자동차 브랜드의 신차 런칭 캠페인 기획 및 실행. 타깃 세그먼트별 맞춤 커뮤니케이션 전략 수립.</p>
+          <div class="proj-kpi"><strong>Luxury</strong>Launch Campaign</div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img-wrap">
+          <svg width="100%" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="160" fill="#1d3557"/>
+            <rect x="60" y="38" width="60" height="76" rx="3" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="130" y="46" width="60" height="68" rx="3" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="200" y="52" width="60" height="62" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="68" y1="56" x2="112" y2="56" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="68" y1="64" x2="112" y2="64" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <line x1="68" y1="72" x2="112" y2="72" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <text x="160" y="148" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="8" letter-spacing="3" font-family="Inter,sans-serif">미래엔 교과서</text>
+          </svg>
+        </div>
+        <div class="proj-body">
+          <p class="proj-cat">Education · Brand</p>
+          <p class="proj-name">미래엔 교과서 브랜드 캠페인</p>
+          <p class="proj-desc">국내 교육 출판 브랜드 미래엔의 브랜드 인지도 제고 캠페인. 학부모·학생 타깃 멀티채널 커뮤니케이션 기획 및 집행.</p>
+          <div class="proj-kpi"><strong>B2C</strong>Education Brand</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CAMPAIGN FILMS & PRESS -->
+  <section id="films">
+    <div class="sec-header">
+      <span class="sec-title">캠페인 필름 & 기사</span>
+      <span class="sec-count">12</span>
+    </div>
+    <div class="films-grid">
+
+      <a class="film-card" href="https://vimeo.com/1075600194" target="_blank">
+        <div class="film-thumb">
+          <img src="https://vumbnail.com/1075600194.jpg" alt="Vimeo campaign" onerror="this.parentElement.style.background='#1a1a1a'"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-vimeo">Vimeo</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=uq_wwxL_H_Q" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/uq_wwxL_H_Q/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=w9DarOzq1sA" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/w9DarOzq1sA/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=bWJ6G66Uv7Y" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/bWJ6G66Uv7Y/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=O0LDIszrr98" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/O0LDIszrr98/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=wYXSlz00KZo" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/wYXSlz00KZo/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=hpmja-k035E" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/hpmja-k035E/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=55wNBNBMUk" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/55wNBNBMUk/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=YRysBNEhJh0" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/YRysBNEhJh0/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=Sn7xuJcoWeI" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/Sn7xuJcoWeI/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card" href="https://www.youtube.com/watch?v=UzajveKv-M8" target="_blank">
+        <div class="film-thumb">
+          <img src="https://img.youtube.com/vi/UzajveKv-M8/mqdefault.jpg" alt="YouTube campaign"/>
+          <span class="film-play"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-platform film-yt">YouTube</span>
+        </div>
+        <p class="film-title">캠페인 필름</p>
+      </a>
+
+      <a class="film-card film-article" href="https://www.hankyung.com/article/202104238406Y" target="_blank">
+        <div class="film-thumb film-thumb-article">
+          <span class="article-icon">📰</span>
+          <span class="film-platform film-press">Press</span>
+        </div>
+        <p class="film-title">벤츠, 기부하며 달리는 비대면 '기브앤 레이스' 개최</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-header">
+      <span class="sec-title">경력</span>
+      <span class="sec-count">07</span>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row">
+        <span class="exp-period"><span class="now-dot"></span>2024.09 — 현재</span>
+        <div>
+          <p class="exp-role">Director of Digital Communication</p>
+          <p class="exp-co">Publicis Groupe</p>
+        </div>
+        <span class="exp-dur">1yr 8mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2021.06 — 2024.09</span>
+        <div>
+          <p class="exp-role">Communication Professional</p>
+          <p class="exp-co">HSAd</p>
+        </div>
+        <span class="exp-dur">3yr 4mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2020.01 — 2021.06</span>
+        <div>
+          <p class="exp-role">Account Manager</p>
+          <p class="exp-co">Publicis Emil</p>
+          <p class="exp-note">Global network agency for Daimler / Mercedes-Benz Korea</p>
+        </div>
+        <span class="exp-dur">1yr 6mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2018.09 — 2021.06</span>
+        <div>
+          <p class="exp-role">Account Manager</p>
+          <p class="exp-co">Leo Burnett</p>
+        </div>
+        <span class="exp-dur">2yr 10mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2017.05 — 2018.09</span>
+        <div>
+          <p class="exp-role">Digital Marketing AE</p>
+          <p class="exp-co">Makeulike</p>
+          <p class="exp-note">Marketing Communication Planner</p>
+        </div>
+        <span class="exp-dur">1yr 5mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2015.04 — 2017.05</span>
+        <div>
+          <p class="exp-role">Account Executive</p>
+          <p class="exp-co">Creative Lounge</p>
+        </div>
+        <span class="exp-dur">2yr 2mo</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-period">2013.09 — 2014.02</span>
+        <div>
+          <p class="exp-role">Account Executive</p>
+          <p class="exp-co">대홍기획 · 서울 마포구</p>
+        </div>
+        <span class="exp-dur">6mo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-header">
+      <span class="sec-title">스킬 & 전문 영역</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cell">Digital Marketing</div>
+      <div class="skill-cell">IMC Strategy</div>
+      <div class="skill-cell">BTL Promotion</div>
+      <div class="skill-cell">Global Campaign</div>
+      <div class="skill-cell">Brand Communication</div>
+      <div class="skill-cell">Account Management</div>
+      <div class="skill-cell">Consumer Insight</div>
+      <div class="skill-cell">Campaign Planning</div>
+      <div class="skill-cell">Automotive</div>
+      <div class="skill-cell">Gaming / Entertainment</div>
+      <div class="skill-cell">FMCG</div>
+      <div class="skill-cell">Sports & Lifestyle</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-name">Yongwook Kwon</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/yongwook-kwon-16a067140/" target="_blank">LinkedIn</a>
+      <a href="mailto:kyw9518@gmail.com">Email</a>
+    </div>
+    <span class="footer-copy">© 2026</span>
+  </footer>
+
+</body>
+</html>
